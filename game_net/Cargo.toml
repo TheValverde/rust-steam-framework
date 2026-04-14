@@ -1,0 +1,15 @@
+[package]
+name = "game_net"
+version = "0.1.0"
+edition = "2021"
+authors = ["Hugo Valverde"]
+license = "MIT"
+description = "Portable length-framed Steam P2P session and v4-style wire headers (no game payloads)."
+
+[features]
+default = ["steam"]
+steam = ["dep:steamworks", "dep:rand"]
+
+[dependencies]
+rand = { version = "0.8", optional = true }
+steamworks = { version = "0.12.2", optional = true }
